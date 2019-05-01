@@ -34,6 +34,9 @@ group :development, :test do
 end
 
 group :development do
+  gem  'faker'
+  gem 'geocoder'
+  gem 'random-location'
 end
 
 

@@ -6,13 +6,41 @@ One Paragraph of project description goes here
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Setting up
 
 What things you need to install the software and how to install them
 
+First you have to copy project files. Then open console and navigate to /api-server and run:
 ```
-Give examples
+bundle install
 ```
+
+Then go open /config/database.yml and under *default* enter your postgresql username and password (required to be able to create a database):
+```
+default: &default
+  # some code
+  username: your_username
+  password: your_password
+  # some code
+```
+
+Return to console and run the followind commands:
+```
+rake db:create
+```
+```
+rake db:migrate
+```
+```
+rake db:seed
+```
+
+Finally, run:
+```
+rails s
+```
+
+Now you should have a server up and running
 
 ### Installing
 

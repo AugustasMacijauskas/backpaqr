@@ -1,36 +1,27 @@
 class ApplicationController < ActionController::API
   # Handling all errors here to avoid repeating code in controller
-  rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
-  rescue_from ActiveRecord::RecordNotFound, ActiveRecord::ActiveRecordError, with: :render_not_found_response
-  rescue_from AbstractController::ActionNotFound, with: :render_action_not_found_response
-  rescue_from StandardError, with: :render_standard_error_response
+  # This is not the best way to handle routes,
+  # as it would be hard to scale the application under the current implementation
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
-  def render_unprocessable_entity_response(exception)
+  def render_not_found_response
     render json: {
         status: "ERROR",
-        error: exception.record.errors
-    }, status: :unprocessable_entity
-  end
-
-  def render_not_found_response(exception)
-    render json: {
-        status: "ERROR",
-        error: exception.message
+        message: "Resource not found"
     }, status: :not_found
   end
 
-  def render_action_not_found_response(exception)
+  # Used to handle routing errors
+  def routing_error
     render json: {
         status: "ERROR",
-        error: exception.message
-    }, status: :not_implemented
+        message: "Route does not exist"
+    }, status: :not_found
   end
 
-  def render_standard_error_response(exception)
-    render json: {
-        status: "ERROR",
-        error: exception.message
-    }, status: :not_implemented
+  def action_missing(m, *args, &block)
+    Rails.logger.error(m)
+    redirect_to '/*path'
   end
 
 end

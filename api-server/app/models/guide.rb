@@ -3,7 +3,7 @@ class Guide < ApplicationRecord
   validates :city, presence: true
   has_many :locations
   
-  def self.guides_with_recent_locations(how_many = 5)
+  def self.guides_with_recent_locations(how_many = nil)
     guides = Guide.order("created_at DESC");
 
     @guides_with_locations = []
@@ -11,7 +11,7 @@ class Guide < ApplicationRecord
     guides.each do |guide|
       @sorted_locations = guide.locations.sort_by { |location| location.created_at }
       length = @sorted_locations.length
-      if length >= how_many.to_i
+      if how_many != nil && length >= how_many.to_i
         @sorted_locations = @sorted_locations[(length - how_many.to_i...length)]
       end
 

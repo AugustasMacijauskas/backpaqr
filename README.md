@@ -90,19 +90,31 @@ Frontend:
 
 material-ui
 axios
+
 google-maps-react
+
 i18next
+
 react-i18next
+
 moment
+
 react
+
 redux
+
 redux-thunk
+
 styled-components
 
+
 Backend:
+
 pg
 faker
+
 geocoder
+
 random-location
 
 ## Contributing

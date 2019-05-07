@@ -87,8 +87,9 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 Frontend:
-
+```
 material-ui
+
 axios
 
 google-maps-react
@@ -106,16 +107,18 @@ redux
 redux-thunk
 
 styled-components
-
+```
 
 Backend:
-
+```
 pg
+
 faker
 
 geocoder
 
 random-location
+```
 
 ## Contributing
 

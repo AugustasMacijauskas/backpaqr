@@ -86,9 +86,24 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Frontend:
+
+material-ui
+axios
+google-maps-react
+i18next
+react-i18next
+moment
+react
+redux
+redux-thunk
+styled-components
+
+Backend:
+pg
+faker
+geocoder
+random-location
 
 ## Contributing
 

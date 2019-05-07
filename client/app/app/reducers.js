@@ -1,0 +1,1 @@
+export { guidesReducer as guides } from 'features/guides';

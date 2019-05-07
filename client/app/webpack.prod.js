@@ -14,7 +14,7 @@ module.exports = () => {
     }),
     new UglifyJSPlugin({ sourceMap: true }),
     new HtmlWebpackPlugin({
-      title: 'NFQ_akademijos_stojimo_uzduotis',
+      title: 'Backpaqr_uzduotis',
       template: './index.html',
       chunks: ['bundle'],
       filename: 'index.html',

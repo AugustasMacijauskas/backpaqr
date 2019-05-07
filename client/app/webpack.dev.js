@@ -18,7 +18,7 @@ module.exports = () => {
   config.plugins = [
     ...config.plugins,
     new HtmlWebpackPlugin({
-      title: 'NFQ_akademijos_stojimo_uzduotis',
+      title: 'Backpaqr_uzduotis',
       template: './index.html',
       chunks: ['bundle'],
       filename: 'index.html',

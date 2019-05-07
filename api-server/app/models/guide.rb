@@ -15,7 +15,14 @@ class Guide < ApplicationRecord
         @sorted_locations = @sorted_locations[(length - how_many.to_i...length)]
       end
 
-      @guides_with_locations << { guide: guide, locations: @sorted_locations }
+      @guides_with_locations << { guide: {
+          id: guide.id,
+          name: guide.name,
+          city: guide.city,
+          created_at: guide.created_at,
+          locations: @sorted_locations
+        }
+      }
     end
 
     return @guides_with_locations

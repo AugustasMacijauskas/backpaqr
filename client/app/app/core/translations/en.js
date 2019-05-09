@@ -1,5 +1,9 @@
 export default {
     translations: {
+        languages: {
+            en: 'English',
+            lt: 'Lithuanian'
+        },
         navigation: {
             guides: 'Guides',
             map: 'Map',

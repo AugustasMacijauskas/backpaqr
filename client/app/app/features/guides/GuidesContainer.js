@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { connect } from "react-redux";
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -67,6 +67,12 @@ const styles = theme => ({
 });
 
 class GuidesContainer extends PureComponent {
+    static propTypes = {
+        classes: PropTypes.shape({}).isRequired,
+        guides: PropTypes.array.isRequired,
+        t: PropTypes.func.isRequired,
+    };
+
     componentDidMount() {
         const { getListOfGuides } = this.props;
 
@@ -77,7 +83,7 @@ class GuidesContainer extends PureComponent {
         const { classes, guides, t } = this.props;
 
         return (
-            <React.Fragment>
+            <Fragment>
                 <CssBaseline />
                 <main>
                     {/* Hero unit */}
@@ -118,22 +124,15 @@ class GuidesContainer extends PureComponent {
                 </main>
                 {/* Footer */}
                 <footer className={classes.footer}>
-                    <Typography variant="h6" align="center" gutterBottom>
+                    <Typography variant="h6" align="center" gutterBottom >
                         Backpaqr
-                    </Typography>
-                    <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                        { t('navigation.viewMap') }
                     </Typography>
                 </footer>
                 {/* End footer */}
-            </React.Fragment>
+            </Fragment>
         );
     }
 }
-
-GuidesContainer.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
 const mapActionsToProps = {
     getListOfGuides: getListOfGuidesAction,

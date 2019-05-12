@@ -1,10 +1,10 @@
 # backpaqr
 
-One Paragraph of project description goes here
+Augustas Macijauskas solution for Backpaqr internship task.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Setting up
 
@@ -15,7 +15,7 @@ First you have to copy project files. Then open console and navigate to /api-ser
 bundle install
 ```
 
-Then go open /config/database.yml and under *default* enter your postgresql username and password (required to be able to create a database):
+Then you need to insert your database user. Open /config/database.yml and under *default* enter your postgresql username and password:
 ```
 default: &default
   # some code
@@ -40,49 +40,22 @@ Finally, run:
 rails s
 ```
 
-Now you should have a server up and running
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+You should now have a backend server up and running. To set up the frontend, navigate to /client/app and open a console window. Run these commands:
 ```
-Give the example
+npm install
 ```
-
-And repeat
-
+if you are using npm, or
 ```
-until finished
+yarn install
+```
+if you are using yarn.
+
+Then run:
+```
+npm run start
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+You should now have a frontend server up and running.
 
 ## Built With
 

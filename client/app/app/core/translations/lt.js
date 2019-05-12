@@ -8,6 +8,9 @@ export default {
             guides: 'Gidai',
             map: 'Žemėlapis',
             viewMap: 'Žiūrėti žemėlapį',
+            search: 'Ieškoti',
+            guideLocationInformation: 'Gido buvimo vietos informacija',
+            close: 'Uždaryti',
         },
         guides: {
             header: 'Mūsų gidai',
@@ -33,5 +36,9 @@ export default {
             Singapore: 'Singapūras',
             Montreal: 'Montrealis',
         },
+        misc: {
+            markerTitle: ' dabartinė buvimo vieta',
+            markerTitlePrevious: ' buvusi vieta',
+        }
     },
 };

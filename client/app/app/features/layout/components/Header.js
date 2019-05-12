@@ -1,4 +1,5 @@
-import React, { Component, Fragment} from 'react';
+import React, { Component, Fragment, } from 'react';
+import { connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {
     CssBaseline, AppBar, Toolbar, Button, withStyles, InputBase,
@@ -10,6 +11,7 @@ import styled from 'styled-components';
 
 import { ROUTES } from 'constants';
 import { BackpaqrLogo } from 'styles/images';
+import { filterGuidesAction, } from '../../guides/actions';
 
 // Styles
 const styles = (theme) => ({
@@ -81,7 +83,26 @@ class Header extends Component {
     static propTypes = {
         classes: PropTypes.shape({}).isRequired,
         handleLanguageChange: PropTypes.func.isRequired,
+        value: PropTypes.string,
         t: PropTypes.func.isRequired,
+    };
+
+    state = {
+        filters: '',
+    };
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.language !== this.props.language) {
+            this.setState({
+                filters: '',
+            }, () => this.props.filterGuides(this.state.filters.toLowerCase()));
+        }
+    }
+
+    handleSearch = (search) => {
+        this.setState({
+            filters: search.target.value,
+        }, () => this.props.filterGuides(this.state.filters.toLowerCase()));
     };
 
     render() {
@@ -104,11 +125,13 @@ class Header extends Component {
                                 <SearchIcon />
                             </div>
                             <InputBase
-                                placeholder="Search…"
+                                placeholder={`${t('navigation.search')}…`}
                                 classes={{
                                     root: classes.inputRoot,
                                     input: classes.inputInput,
                                 }}
+                                value={this.state.filters}
+                                onChange={this.handleSearch}
                             />
                         </div>
                         <Button
@@ -146,4 +169,12 @@ class Header extends Component {
     }
 }
 
-export default withStyles(styles)(Header);
+const mapActionsToProps = {
+    filterGuides: filterGuidesAction,
+};
+
+const mapStateToProps = () => ({
+
+});
+
+export default connect(mapStateToProps, mapActionsToProps)(withStyles(styles)(Header));

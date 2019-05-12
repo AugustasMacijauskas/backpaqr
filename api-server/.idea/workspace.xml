@@ -81,20 +81,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/guides_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="23" selection-end-column="46" />
+            <state relative-caret-position="374">
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/guide.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="306">
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -137,8 +137,8 @@
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/config/initializers/cors.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/guides_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/guide.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/guides_controller.rb" />
       </list>
     </option>
   </component>
@@ -152,62 +152,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="api-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="v1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-server" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-server" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-server" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="initializers" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -340,11 +287,13 @@
       <workItem from="1557173296781" duration="1819000" />
       <workItem from="1557237504991" duration="798000" />
       <workItem from="1557256665511" duration="598000" />
+      <workItem from="1557422861367" duration="16000" />
+      <workItem from="1557422935787" duration="1226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40170000" />
+    <option name="totallyTimeSpent" value="41412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -436,27 +385,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/guides/locations_controller.rb" />
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/errors_controller.rb" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/database/backpaqr/schema/public/table/guides">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/database/backpaqr/schema/public/table/locations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/console.sql" />
+    <entry file="das://7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/database/backpaqr/schema/public/table/guides" />
+    <entry file="das://7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/database/backpaqr/schema/public/table/locations" />
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -464,22 +395,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/database/backpaqr_development/schema/public/table/guides">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/database/backpaqr_development/schema/public/table/locations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/database/backpaqr_development/schema/public/table/guides" />
+    <entry file="das://7b17d626-cce4-4c3f-853e-f3c80b2eaf0c/database/backpaqr_development/schema/public/table/locations" />
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -525,17 +442,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/guides_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/guide.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="23" selection-end-column="46" />
+        <state relative-caret-position="306">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/guide.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/guides_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        <state relative-caret-position="374">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
         </state>
       </provider>
     </entry>

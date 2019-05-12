@@ -16,13 +16,11 @@ module Api
         render json: {
             status: "SUCCESS",
             data: {
-                guide: {
-                    id: guide.id,
-                    name: guide.name,
-                    city: guide.city,
-                    created_at: guide.created_at,
-                    locations: guide.locations
-                },
+                id: guide.id,
+                name: guide.name,
+                city: guide.city,
+                created_at: guide.created_at,
+                locations: guide.locations
             }
         }, status: :ok
       end

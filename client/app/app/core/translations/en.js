@@ -8,6 +8,9 @@ export default {
             guides: 'Guides',
             map: 'Map',
             viewMap: 'View Map',
+            search: 'Search',
+            guideLocationInformation: 'Guide location information',
+            close: 'Close',
         },
         guides: {
             header: 'Our guides',
@@ -33,5 +36,9 @@ export default {
             Singapore: 'Singapore',
             Montreal: 'Montreal',
         },
+        misc: {
+            markerTitle: '\'s current location',
+            markerTitlePrevious: '\'s previous location',
+        }
     },
 };

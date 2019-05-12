@@ -1,31 +1,16 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent, Fragment, } from 'react';
 import { connect } from "react-redux";
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {
-    Card,
-    CardContent,
-    CardMedia,
     CssBaseline,
     Grid,
     Typography,
     withStyles,
 } from '@material-ui/core';
-import { withTranslation } from 'react-i18next';
 
-import { getListOfGuidesAction } from './actions';
-import { Guide1, Guide2, Guide3, Guide4, Guide5, Guide6, Guide7 } from 'styles/images';
-
-// List to map guides so that they could be accessed randomly
-const guidesPhotos = {
-    guide1: Guide1,
-    guide2: Guide2,
-    guide3: Guide3,
-    guide4: Guide4,
-    guide5: Guide5,
-    guide6: Guide6,
-    guide7: Guide7,
-};
+import { MapModal, GuideCard } from './components';
+import { getListOfGuidesAction, getGuideAction, } from './actions';
 
 const styles = theme => ({
     heroUnit: {
@@ -49,17 +34,6 @@ const styles = theme => ({
     cardGrid: {
         padding: `${theme.spacing.unit * 8}px 0`,
     },
-    card: {
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    cardMedia: {
-        paddingTop: '86.25%', // 16:9
-    },
-    cardContent: {
-        flexGrow: 1,
-    },
     footer: {
         backgroundColor: theme.palette.background.paper,
         padding: theme.spacing.unit * 6,
@@ -79,12 +53,38 @@ class GuidesContainer extends PureComponent {
         getListOfGuides();
     }
 
+    state = {
+        mapOpen: false,
+        currentGuideID: null,
+    };
+
+    handleClickOpen = (guideID) => {
+        this.setState({
+            mapOpen: true,
+            currentGuideID: guideID,
+        }, () => this.props.getGuide(this.state.currentGuideID));
+    };
+
+    handleClose = () => {
+        this.setState({
+            mapOpen: false,
+            currentGuideID: null,
+        });
+    };
+
     render() {
-        const { classes, guides, t } = this.props;
+        const { mapOpen } = this.state;
+        const { classes, guides, currentGuide, t } = this.props;
 
         return (
             <Fragment>
                 <CssBaseline />
+                <MapModal
+                    open={mapOpen}
+                    handleClose={this.handleClose}
+                    currentGuide={currentGuide}
+                    t={t}
+                />
                 <main>
                     {/* Hero unit */}
                     <div className={classes.heroUnit}>
@@ -101,23 +101,12 @@ class GuidesContainer extends PureComponent {
                         {/* End hero unit */}
                         <Grid container spacing={40}>
                             {guides.map(guide => (
-                                <Grid item key={guide.id} xs={12} sm={6} md={4} >
-                                    <Card className={classes.card}>
-                                        <CardMedia
-                                            className={classes.cardMedia}
-                                            image={guidesPhotos[`guide${Math.floor(Math.random() * 7) + 1}`]}
-                                            title={guide.name}
-                                        />
-                                        <CardContent className={classes.cardContent}>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                {guide.name}
-                                            </Typography>
-                                            <Typography>
-                                                { t(`cities.${guide.city.replace(/\s/g,'')}`) }
-                                            </Typography>
-                                        </CardContent>
-                                    </Card>
-                                </Grid>
+                                <GuideCard
+                                    key={guide.id}
+                                    guide={guide}
+                                    handleClickOpen={this.handleClickOpen}
+                                    t={t}
+                                />
                             ))}
                         </Grid>
                     </div>
@@ -136,10 +125,12 @@ class GuidesContainer extends PureComponent {
 
 const mapActionsToProps = {
     getListOfGuides: getListOfGuidesAction,
+    getGuide: getGuideAction,
 };
 
 const mapStateToProps = (state) => ({
-    guides: state.guides.guides
+    guides: state.guides.filteredGuides,
+    currentGuide: state.guides.currentGuide,
 });
 
-export default withTranslation()(connect(mapStateToProps, mapActionsToProps)(withStyles(styles)(GuidesContainer)));
+export default connect(mapStateToProps, mapActionsToProps)(withStyles(styles)(GuidesContainer));

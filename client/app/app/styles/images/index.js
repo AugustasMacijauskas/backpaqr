@@ -6,3 +6,4 @@ export Guide4 from './guide_4.jpg';
 export Guide5 from './guide_5.jpg';
 export Guide6 from './guide_6.jpg';
 export Guide7 from './guide_7.jpg';
+export MapManIcon from './mapManIcon.png';

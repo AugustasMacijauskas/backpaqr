@@ -52,12 +52,16 @@ Or, if you are using yarn, run:
 yarn install
 ```
 
+**Insert your google api key at /client/app/app/constants/googleApi.js**
+
+
 Then run:
 ```
 npm run start
 ```
 
 You should now have a frontend server up and running on port 8080.
+
 
 ## Built With
 
@@ -66,6 +70,8 @@ Frontend:
 react - library to build frontend applications
 
 redux, redux-thunk - used for global store management, creating actions and reducers and connecting with components
+
+react-router - used to implement navigation functionality
 
 material-ui - a collection of beautiful responsive components to build applications
 
@@ -76,6 +82,8 @@ google-maps-react - a google maps library easing work with maps
 i18next, react-i18next - both used for adding translation functionality to the website
 
 moment - used to manipulate dates
+
+prop-types - used to tell the application what variables are of what type, which is helpful to prevent bugs
 
 styled-components - useful library to style components
 ```

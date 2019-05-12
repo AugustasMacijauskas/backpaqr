@@ -1,24 +1,35 @@
-# README
+### Setting up
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What things you need to install the software and how to install them
 
-Things you may want to cover:
+First you have to copy project files. Then open console and navigate to /api-server and run:
+```
+bundle install
+```
 
-* Ruby version
+Then you need to insert your database user. Open /config/database.yml and under *default* enter your postgresql username and password:
+```
+default: &default
+  # some code
+  username: your_username
+  password: your_password
+  # some code
+```
 
-* System dependencies
+Return to console and run the followind commands:
+```
+rake db:create
+```
+```
+rake db:migrate
+```
+```
+rake db:seed
+```
 
-* Configuration
+Finally, run:
+```
+rails s
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You should now have a backend server up and running.

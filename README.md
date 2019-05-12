@@ -52,7 +52,12 @@ Or, if you are using yarn, run:
 yarn install
 ```
 
-**Insert your google api key at /client/app/app/constants/googleApi.js**
+**Now, insert your google api key at /client/app/app/constants/googleApi.js:**
+```
+export default {
+    KEY: 'insert_your_key_here',
+}
+```
 
 
 Then run:

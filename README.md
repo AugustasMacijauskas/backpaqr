@@ -24,7 +24,7 @@ default: &default
   # some code
 ```
 
-Return to console and run the followind commands:
+Return to console and run the following commands:
 ```
 rake db:create
 ```
@@ -40,7 +40,7 @@ Finally, run:
 rails s
 ```
 
-You should now have a backend server up and running.
+You should now have a backend server up and running on port 3000.
 
 
 To set up the frontend, navigate to /client/app and open a console window. If you are using npm, run:
@@ -57,45 +57,41 @@ Then run:
 npm run start
 ```
 
-You should now have a frontend server up and running.
+You should now have a frontend server up and running on port 8080.
 
 ## Built With
 
 Frontend:
 ```
-material-ui
+react - library to build frontend applications
 
-axios
+redux, redux-thunk - used for global store management, creating actions and reducers and connecting with components
 
-google-maps-react
+material-ui - a collection of beautiful responsive components to build applications
 
-i18next
+axios - used to fetch data by making requests to the backend server
 
-react-i18next
+google-maps-react - a google maps library easing work with maps
 
-moment
+i18next, react-i18next - both used for adding translation functionality to the website
 
-react
+moment - used to manipulate dates
 
-redux
-
-redux-thunk
-
-styled-components
+styled-components - useful library to style components
 ```
 
 Backend:
 ```
-pg
+pg - postgres database is used
 
-faker
+faker - used for generating fake data to seed the database
 
-geocoder
+geocoder - used for generating fake data to seed the database
 
-random-location
+random-location - used for generating locations to seed the database
 ```
 
 
 ## Authors
 
-* **Augustas Macijauskas** - *Initial work* - [AugustasMacijauskas](https://github.com/AugustasMacijauskas)
+* **Augustas Macijauskas** - [AugustasMacijauskas](https://github.com/AugustasMacijauskas)
